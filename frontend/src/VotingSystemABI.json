@@ -1,0 +1,178 @@
+[
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        { "internalType": "string", "name": "_name", "type": "string" }
+      ],
+      "name": "createPosition",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "string", "name": "_name", "type": "string" },
+        { "internalType": "address", "name": "_voterAddress", "type": "address" }
+      ],
+      "name": "registerVoter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "address", "name": "_voterAddress", "type": "address" },
+        { "internalType": "string", "name": "_newName", "type": "string" }
+      ],
+      "name": "updateVoter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "address", "name": "_voterAddress", "type": "address" }
+      ],
+      "name": "deleteVoter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "string", "name": "_name", "type": "string" },
+        { "internalType": "uint256", "name": "_positionId", "type": "uint256" }
+      ],
+      "name": "addCandidate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "uint256", "name": "_candidateId", "type": "uint256" },
+        { "internalType": "string", "name": "_newName", "type": "string" }
+      ],
+      "name": "updateCandidate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "uint256", "name": "_candidateId", "type": "uint256" }
+      ],
+      "name": "deleteCandidate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "uint256", "name": "_positionId", "type": "uint256" },
+        { "internalType": "string", "name": "_newName", "type": "string" }
+      ],
+      "name": "updatePosition",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "uint256", "name": "_positionId", "type": "uint256" }
+      ],
+      "name": "deletePosition",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "string", "name": "_candidateName", "type": "string" }
+      ],
+      "name": "voteByName",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "uint256", "name": "_positionId", "type": "uint256" }
+      ],
+      "name": "getResults",
+      "outputs": [
+        {
+          "components": [
+            { "internalType": "uint256", "name": "id", "type": "uint256" },
+            { "internalType": "string", "name": "name", "type": "string" },
+            { "internalType": "uint256", "name": "positionId", "type": "uint256" },
+            { "internalType": "uint256", "name": "voteCount", "type": "uint256" }
+          ],
+          "internalType": "struct VotingSystem.Candidate[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAllVoters",
+      "outputs": [
+        {
+          "components": [
+            { "internalType": "string", "name": "name", "type": "string" },
+            { "internalType": "address", "name": "voterAddress", "type": "address" },
+            { "internalType": "bool", "name": "isRegistered", "type": "bool" }
+          ],
+          "internalType": "struct VotingSystem.Voter[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAllCandidatesWithPositionNames",
+      "outputs": [
+        { "internalType": "string[]", "name": "candidateNames", "type": "string[]" },
+        { "internalType": "string[]", "name": "positionNames", "type": "string[]" },
+        { "internalType": "uint256[]", "name": "voteCounts", "type": "uint256[]" }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAllPositions",
+      "outputs": [
+        {
+          "components": [
+            { "internalType": "uint256", "name": "id", "type": "uint256" },
+            { "internalType": "string", "name": "name", "type": "string" },
+            { "internalType": "bool", "name": "exists", "type": "bool" }
+          ],
+          "internalType": "struct VotingSystem.Position[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "candidateCount",
+      "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+  
